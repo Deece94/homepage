@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Theme from "./Theme";
 
 const NavContainer = styled.nav`
   background-color: ${(props) => props.theme.colors.dark};
