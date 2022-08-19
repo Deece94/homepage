@@ -1,32 +1,40 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import Theme from "./Theme";
 
-const Button = styled.button``;
-
-const Container = styled.nav`
-    text
+const NavContainer = styled.nav`
+  background-color: ${(props) => props.theme.colors.dark};
+  display: flex;
 `;
 
-const NavItem = styled.li``;
+const NavBlock = styled.div`
+  padding: 10px;
+  display: block;
+  background-color: inherit;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.dark_accent};
+  }
+`;
+
+const NavLink = styled.a`
+  color: ${(props) => props.theme.colors.white};
+  text-decoration: none;
+`;
 
 export default function NavBar() {
   return (
-    <Container>
-      <ul>
-        <NavItem>
-          <a href="/home">Home</a>
-        </NavItem>
-        <NavItem>
-          <a href="/home">About Me</a>
-        </NavItem>
-        <NavItem>
-          <a href="/home">Projects</a>
-        </NavItem>
-        <NavItem>
-          <a href="/home">Contact</a>
-        </NavItem>
-      </ul>
-      <div>navbar</div>
-    </Container>
+    <NavContainer>
+      <NavBlock>
+        <NavLink href="/home">Home</NavLink>
+      </NavBlock>
+      <NavBlock>
+        <NavLink href="/home">About Me</NavLink>
+      </NavBlock>
+      <NavBlock>
+        <NavLink href="/home">Projects</NavLink>
+      </NavBlock>
+      <NavBlock>
+        <NavLink href="/home">Contact</NavLink>
+      </NavBlock>
+    </NavContainer>
   );
 }
