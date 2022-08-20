@@ -6,8 +6,11 @@ export const theme = {
     dark: "#30292f",
     dark_accent: "#3e353c",
     light: "#3f4045",
-    white: "#fff",
+    white: "#eee",
     gray: "#3f4045",
-    black: "#000",
+    black: "#222",
+  },
+  fonts: {
+    primary: "'Rubik', sans-serif",
   },
 };

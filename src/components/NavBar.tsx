@@ -3,6 +3,7 @@ import styled from "styled-components";
 const NavContainer = styled.nav`
   background-color: ${(props) => props.theme.colors.dark};
   display: flex;
+  padding: 0px 50px 0px 50px;
 `;
 
 const NavBlock = styled.div`
@@ -17,6 +18,8 @@ const NavBlock = styled.div`
 const NavLink = styled.a`
   color: ${(props) => props.theme.colors.white};
   text-decoration: none;
+  font-weight: bold;
+  font-size: 150%;
 `;
 
 export default function NavBar() {
