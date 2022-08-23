@@ -15,10 +15,10 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export default function Theme({ children }) {
-	return (
-		<>
-			<GlobalStyles />
-			<ThemeProvider theme={theme}>{children}</ThemeProvider>
-		</>
-	);
+  return (
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </>
+  );
 }

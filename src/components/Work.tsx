@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import PageBlock from "./PageBlock";
 
-const Header = styled.h3`
+const Header = styled.h1`
   text-decoration: underline;
 `;
 
 export default function About() {
   return (
-    <PageBlock id="about">
-      <Header>About Me</Header>
+    <PageBlock id="work">
+      <Header>My Work</Header>
       <p>information</p>
+      <p>Git hub source for projects</p>
     </PageBlock>
   );
 }
