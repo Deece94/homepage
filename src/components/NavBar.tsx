@@ -1,42 +1,85 @@
 import styled from "styled-components";
 
-const NavContainer = styled.nav`
-  background-color: ${(props) => props.theme.colors.dark};
+const FixedContainer = styled.header`
+  width: 100%;
+  z-index: 50;
+  top: 0;
+  position: fixed;
+  backdrop-filter: blur(5px);
+`;
+
+const FlexContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   padding: 0px 50px 0px 50px;
+`;
+
+const TitleContainer = styled.div`
+  width: 70%;
+`;
+
+const NavContainer = styled.nav`
+  display: flex;
 `;
 
 const NavBlock = styled.div`
   padding: 10px;
   display: block;
-  background-color: inherit;
+`;
+
+const NavLink = styled.button`
+  color: ${(props) => props.theme.colors.white};
+  font-weight: bold;
+  font-size: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   &:hover {
-    background-color: ${(props) => props.theme.colors.dark_accent};
+    text-decoration: underline;
   }
 `;
 
-const NavLink = styled.a`
-  color: ${(props) => props.theme.colors.white};
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 150%;
-`;
+function ScrollLink(props: { scrollToId: string; children: any }) {
+  const scrollToId: string = props.scrollToId;
+
+  const executeScroll = (id: string) => {
+    const ele = document.getElementById(id);
+    window.scrollTo({
+      top: ele.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <NavLink onClick={() => executeScroll(scrollToId)}>
+      {props.children}
+    </NavLink>
+  );
+}
 
 export default function NavBar() {
   return (
-    <NavContainer>
-      <NavBlock>
-        <NavLink href="#home">Home</NavLink>
-      </NavBlock>
-      <NavBlock>
-        <NavLink href="#about">About Me</NavLink>
-      </NavBlock>
-      <NavBlock>
-        <NavLink href="#work">Projects</NavLink>
-      </NavBlock>
-      <NavBlock>
-        <NavLink href="#contact">Contact</NavLink>
-      </NavBlock>
-    </NavContainer>
+    <FixedContainer>
+      <FlexContainer>
+        <TitleContainer>
+          <h1>D</h1>
+        </TitleContainer>
+        <NavContainer>
+          <NavBlock>
+            <ScrollLink scrollToId="home">Home</ScrollLink>
+          </NavBlock>
+          <NavBlock>
+            <ScrollLink scrollToId="about">About Me</ScrollLink>
+          </NavBlock>
+          <NavBlock>
+            <ScrollLink scrollToId="work">Projects</ScrollLink>
+          </NavBlock>
+          <NavBlock>
+            <ScrollLink scrollToId="contact">Contact</ScrollLink>
+          </NavBlock>
+        </NavContainer>
+      </FlexContainer>
+    </FixedContainer>
   );
 }

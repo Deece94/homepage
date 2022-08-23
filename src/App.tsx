@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Footer from "./components/Footer";
+import GlobalWrapper from "./components/GlobalWrapper";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Theme from "./components/Theme";
@@ -9,13 +10,13 @@ export default function App() {
   return (
     <>
       <Theme>
-        <div className="App">
-          <NavBar />
+        <NavBar />
+        <GlobalWrapper className="App">
           <Home />
           <About />
           <Work />
           <Footer />
-        </div>
+        </GlobalWrapper>
       </Theme>
     </>
   );
