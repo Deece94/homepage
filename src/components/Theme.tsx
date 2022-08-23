@@ -7,13 +7,18 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.4;
     font-family: ${theme.fonts.primary};
   }
+
+  body {
+    background-color: ${theme.colors.gray};
+    color: ${theme.colors.white}
+  }
 `;
 
 export default function Theme({ children }) {
-  return (
-    <>
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </>
-  );
+	return (
+		<>
+			<GlobalStyles />
+			<ThemeProvider theme={theme}>{children}</ThemeProvider>
+		</>
+	);
 }
