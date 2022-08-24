@@ -1,9 +1,3 @@
-import {
-	ReactElement,
-	JSXElementConstructor,
-	ReactFragment,
-	ReactPortal,
-} from "react";
 import styled from "styled-components";
 
 const Block = styled.div<{ backgroundColor: string }>`

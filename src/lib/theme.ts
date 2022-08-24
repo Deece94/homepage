@@ -1,4 +1,4 @@
-export const theme = {
+export const theme: ThemeObject = {
   colors: {
     primary: "#7a73b1",
     accent: "#355691",
@@ -14,3 +14,9 @@ export const theme = {
     primary: "'Rubik', sans-serif",
   },
 };
+
+
+interface ThemeObject{
+  colors: {[index: string]: string },
+  fonts: {[index: string]: string }
+}
