@@ -3,16 +3,28 @@ import PageBlock from "./PageBlock";
 
 const Header = styled.h1`
 	text-decoration: underline;
-	color: ${(props) => props.theme.colors.primary};
+	color: ${(props) => props.theme.colors.white};
 `;
 
 const Paragraph = styled.p`
 	color: ${(props) => props.theme.colors.white};
 `;
 
+const Link = styled.a`
+	color: ${(props) => props.theme.colors.white};
+	text-decoration: none;
+	font-weight: bold;
+	&:hover {
+		text-decoration: underline;
+	}
+`;
+
 export default function About() {
 	return (
-		<PageBlock id="about">
+		<PageBlock
+			id="about"
+			backgroundColor={(props) => props.theme.colors.primary}
+		>
 			<Header>About Me</Header>
 			<hr />
 			<Paragraph>
@@ -20,7 +32,7 @@ export default function About() {
 			</Paragraph>
 			<Paragraph>
 				Currently I work for{" "}
-				<a href="https://www.4dcontrols.com">4D Controls</a>.
+				<Link href="https://www.4dcontrols.com">4D Controls</Link>.
 			</Paragraph>
 		</PageBlock>
 	);

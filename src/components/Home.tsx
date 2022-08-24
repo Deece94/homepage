@@ -15,7 +15,7 @@ const Center = styled.div``;
 
 const Introduction = styled.p`
 	margin: 0;
-	font-size: 150%;
+	font-size: clamp(15px, 4vw, 20px);
 `;
 
 const Greeting = styled(Introduction)`
@@ -23,7 +23,7 @@ const Greeting = styled(Introduction)`
 `;
 
 const NameTitle = styled.h1`
-	font-size: 350%;
+	font-size: clamp(40px, 8vw, 60px);
 	font-weight: normal;
 	margin: 0;
 	color: ${(props) => props.theme.colors.white};
