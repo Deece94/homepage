@@ -5,7 +5,8 @@ const FixedContainer = styled.header`
 	z-index: 50;
 	top: 0;
 	position: fixed;
-	backdrop-filter: blur(5px);
+	background-color: ${(props) => props.theme.colors.dark};
+	border-bottom: 1px solid ${(props) => props.theme.colors.white};
 `;
 
 const FlexContainer = styled.div`
@@ -15,7 +16,7 @@ const FlexContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-	width: 70%;
+	width: 60%;
 `;
 
 const NavContainer = styled.nav`
@@ -63,7 +64,7 @@ export default function NavBar() {
 		<FixedContainer>
 			<FlexContainer>
 				<TitleContainer>
-					<h1>D</h1>
+					<p>D</p>
 				</TitleContainer>
 				<NavContainer>
 					<NavBlock>

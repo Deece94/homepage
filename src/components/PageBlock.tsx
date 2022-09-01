@@ -5,8 +5,7 @@ const Block = styled.div<{ backgroundColor: string }>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: ${(props) =>
-		props.backgroundColor ? props.backgroundColor : props.theme.colors.dark};
+	background-color: ${(props) => props.theme.colors.black};
 `;
 
 export default function PageBlock(props: {

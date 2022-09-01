@@ -7,7 +7,7 @@ const Header = styled.h1`
 
 export default function About() {
 	return (
-		<PageBlock id="work" backgroundColor={(props) => props.theme.colors.white}>
+		<PageBlock id="work">
 			<Header>My Work</Header>
 			<p>information</p>
 			<p>Git hub source for projects</p>

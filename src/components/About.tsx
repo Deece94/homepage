@@ -21,18 +21,15 @@ const Link = styled.a`
 
 export default function About() {
 	return (
-		<PageBlock
-			id="about"
-			backgroundColor={(props) => props.theme.colors.primary}
-		>
+		<PageBlock id="about">
 			<Header>About Me</Header>
-			<hr />
 			<Paragraph>
 				Hello! My name is Dylan. I build things on the internet.
 			</Paragraph>
 			<Paragraph>
 				Currently I work for{" "}
-				<Link href="https://www.4dcontrols.com">4D Controls</Link>.
+				<Link href="https://www.4dcontrols.com">4D Controls</Link> engineering
+				and maintaining applications to assist .
 			</Paragraph>
 		</PageBlock>
 	);
