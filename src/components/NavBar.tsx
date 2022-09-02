@@ -5,7 +5,7 @@ const FixedContainer = styled.header`
 	z-index: 50;
 	top: 0;
 	position: fixed;
-	background-color: ${(props) => props.theme.colors.dark};
+	background-color: ${(props) => props.theme.colors.dark_accent};
 	border-bottom: 1px solid ${(props) => props.theme.colors.white};
 `;
 
