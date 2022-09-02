@@ -27,6 +27,22 @@ const Half = styled.div`
 	width: 50%;
 `;
 
+const ImgBorder = styled.div`
+	border: 2px solid ${(props) => props.theme.colors.primary};
+	height: 200px;
+	width: 200px;
+	position: relative;
+`;
+
+const ImgPlaceholder = styled.div`
+	width: 100%;
+	height: 100%;
+	background-color: ${(props) => props.theme.colors.white};
+	position: absolute;
+	top: 10px;
+	left: 10px;
+`;
+
 export default function About() {
 	return (
 		<PageBlock id="about">
@@ -45,7 +61,11 @@ export default function About() {
 						workflow and processes.
 					</Paragraph>
 				</Half>
-				<Half>Img</Half>
+				<Half>
+					<ImgBorder>
+						<ImgPlaceholder></ImgPlaceholder>
+					</ImgBorder>
+				</Half>
 			</Container>
 		</PageBlock>
 	);
