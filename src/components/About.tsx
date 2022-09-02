@@ -19,18 +19,34 @@ const Link = styled.a`
 	}
 `;
 
+const Container = styled.div`
+	display: flex;
+`;
+
+const Half = styled.div`
+	width: 50%;
+`;
+
 export default function About() {
 	return (
 		<PageBlock id="about">
 			<Header>About Me</Header>
-			<Paragraph>
-				Hello! My name is Dylan. I build things on the internet.
-			</Paragraph>
-			<Paragraph>
-				Currently I work for{" "}
-				<Link href="https://www.4dcontrols.com">4D Controls</Link> engineering
-				and maintaining applications to assist .
-			</Paragraph>
+			<Container>
+				<Half>
+					<Paragraph>
+						Hello! My name is Dylan. I'm a fullstack web developer from
+						Newcastle, Australia. I love building products that improve your
+						experience on the web.
+					</Paragraph>
+					<Paragraph>
+						Currently I'm working for{" "}
+						<Link href="https://www.4dcontrols.com">4D Controls</Link>{" "}
+						engineering and maintaining applications that assist our internal
+						workflow and processes.
+					</Paragraph>
+				</Half>
+				<Half>Img</Half>
+			</Container>
 		</PageBlock>
 	);
 }
