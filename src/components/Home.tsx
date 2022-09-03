@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import Typewriter from "react-ts-typewriter";
+import PageBlock from "./PageBlock";
 
-const Block = styled.div`
+const TitleContainer = styled.div`
 	min-height: 100vh;
 	margin: 0px;
 	padding: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: ${(props) => props.theme.colors.black};
+	background-color: ${(props) => props.theme.colors.dark};
 `;
 
 const Center = styled.div``;
@@ -31,15 +32,17 @@ const NameTitle = styled.h1`
 
 export default function Home() {
 	return (
-		<Block id="home">
-			<div>
-				<Greeting>Hi, I'm</Greeting>
-				<TypewriterHeader />
-				<Introduction>
-					A fullstack web developer from Newcastle, Australia.
-				</Introduction>
-			</div>
-		</Block>
+		<PageBlock id="home">
+			<TitleContainer>
+				<div>
+					<Greeting>Hi, I'm</Greeting>
+					<TypewriterHeader />
+					<Introduction>
+						A fullstack web developer from Newcastle, Australia.
+					</Introduction>
+				</div>
+			</TitleContainer>
+		</PageBlock>
 	);
 }
 

@@ -5,8 +5,8 @@ const FixedContainer = styled.header`
   z-index: 50;
   top: 0;
   position: fixed;
-  backdrop-filter: blur(5px);
-  background-color: ${(props) => props.theme.colors.black}c;
+  background-color: ${(props) => props.theme.colors.dark_accent};
+  border-bottom: 1px solid ${(props) => props.theme.colors.white};
 `;
 
 const FlexContainer = styled.div`
