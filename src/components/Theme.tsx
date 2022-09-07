@@ -9,16 +9,16 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${theme.colors.gray};
+    background-color: ${theme.colors.dark};
     color: ${theme.colors.white}
   }
 `;
 
 export default function Theme({ children }) {
-  return (
-    <>
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </>
-  );
+	return (
+		<>
+			<GlobalStyles />
+			<ThemeProvider theme={theme}>{children}</ThemeProvider>
+		</>
+	);
 }

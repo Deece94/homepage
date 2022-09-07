@@ -2,6 +2,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Main from "./components/Main";
 import NavBar from "./components/NavBar";
 import PageBreak from "./components/PageBreak";
 import Theme from "./components/Theme";
@@ -12,14 +13,16 @@ export default function App() {
 		<>
 			<Theme>
 				<NavBar />
-				<Home />
-				<PageBreak />
-				<About />
-				<PageBreak />
-				<Work />
-				<PageBreak />
-				<Contact />
-				<Footer />
+				<Main>
+					<Home />
+					<PageBreak />
+					<About />
+					<PageBreak />
+					<Work />
+					<PageBreak />
+					<Contact />
+					<Footer />
+				</Main>
 			</Theme>
 		</>
 	);

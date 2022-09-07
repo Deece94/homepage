@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
-const Block = styled.div<{ backgroundColor: string }>`
+const Block = styled.section<{ backgroundColor: string }>`
 	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: ${(props) => props.theme.colors.dark};
+	width: 100%;
+	background-color: ${(props) =>
+		props.backgroundColor ? props.backgroundColor : props.theme.colors.dark};
 `;
 
 export default function PageBlock(props: {
@@ -17,7 +16,7 @@ export default function PageBlock(props: {
 	const backgroundColor = props.backgroundColor;
 	return (
 		<Block id={id} backgroundColor={backgroundColor}>
-			<div>{props.children}</div>
+			{props.children}
 		</Block>
 	);
 }

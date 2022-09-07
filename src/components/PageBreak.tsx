@@ -1,10 +1,17 @@
 import styled from "styled-components";
 
 const BreakDiv = styled.div`
-	height: 150px;
-	background-color: ${(props) => props.theme.colors.white};
+	height: 20px;
+`;
+
+const Line = styled.hr`
+	border: 0.5px solid ${(props) => props.theme.colors.primary};
 `;
 
 export default function PageBreak() {
-	return <BreakDiv></BreakDiv>;
+	return (
+		<BreakDiv>
+			<Line />
+		</BreakDiv>
+	);
 }
