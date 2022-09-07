@@ -23,19 +23,24 @@ const Half = styled.div`
 `;
 
 const ImgBorder = styled.div`
-	border: 2px solid ${(props) => props.theme.colors.primary};
-	height: 200px;
-	width: 200px;
 	position: relative;
+	&:after {
+		content: "";
+		border: 2px solid ${(props) => props.theme.colors.primary};
+		top: 20px;
+		left: 20px;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
 `;
 
 const ImgPlaceholder = styled.div`
-	width: 100%;
-	height: 100%;
+	display: block;
+	height: 200px;
+	width: 200px;
 	background-color: ${(props) => props.theme.colors.white};
-	position: absolute;
-	top: 10px;
-	left: 10px;
 `;
 
 export default function About() {
