@@ -1,25 +1,20 @@
 import styled from "styled-components";
 import PageBlock from "./PageBlock";
+import Link from "./styles/Link";
 
 const Header = styled.h1`
 	text-decoration: underline;
 	color: ${(props) => props.theme.colors.white};
+	width: 100%;
+	text-align: center;
 `;
 
 const Paragraph = styled.p`
 	color: ${(props) => props.theme.colors.white};
 `;
 
-const Link = styled.a`
-	color: ${(props) => props.theme.colors.white};
-	text-decoration: none;
-	font-weight: bold;
-	&:hover {
-		text-decoration: underline;
-	}
-`;
-
 const Container = styled.div`
+	padding: 100px;
 	display: flex;
 `;
 
