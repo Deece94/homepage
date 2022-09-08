@@ -1,11 +1,8 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import styled from "styled-components";
 import PageBlock from "./PageBlock";
+import Header from "./styles/Header";
 import Link from "./styles/Link";
-
-const Header = styled.h1`
-	text-decoration: underline;
-`;
 
 const Paragraph = styled.p`
 	color: ${(props) => props.theme.colors.white};

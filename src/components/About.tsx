@@ -1,16 +1,11 @@
 import styled from "styled-components";
 import PageBlock from "./PageBlock";
+import Header from "./styles/Header";
 import Link from "./styles/Link";
-
-const Header = styled.h1`
-	text-decoration: underline;
-	color: ${(props) => props.theme.colors.white};
-	width: 100%;
-	text-align: center;
-`;
 
 const Paragraph = styled.p`
 	color: ${(props) => props.theme.colors.white};
+	font-size: 18px;
 `;
 
 const Container = styled.div`
@@ -51,14 +46,17 @@ export default function About() {
 				<Half>
 					<Paragraph>
 						Hello! My name is Dylan. I'm a fullstack web developer from
-						Newcastle, Australia. I love building products that improve your
-						experience on the web.
+						Newcastle, Australia. I first found an interest in programming
+						during high school building games with GameMaker and Flash and
+						pulling apart others to see how they ticked. Now I love building
+						products that enhance your experience on the web.
 					</Paragraph>
 					<Paragraph>
-						Currently I'm working for{" "}
-						<Link href="https://www.4dcontrols.com">4D Controls</Link>{" "}
-						engineering and maintaining applications that assist our internal
-						workflow and processes.
+						Currently I work for{" "}
+						<Link href="https://www.4dcontrols.com">4D Controls</Link>, one of
+						Australia's largest suppliers of automation equipment. I focus on
+						designing, building and maintaining applications that improve the
+						way we run on a day to day basis.
 					</Paragraph>
 				</Half>
 				<Half>

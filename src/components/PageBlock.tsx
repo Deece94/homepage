@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Block = styled.section<{ backgroundColor: string }>`
+	padding-top: 70px;
 	min-height: 100vh;
 	width: 100%;
 	background-color: ${(props) =>

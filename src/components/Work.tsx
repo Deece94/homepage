@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import PageBlock from "./PageBlock";
-
-const Header = styled.h1`
-	text-decoration: underline;
-`;
+import Header from "./styles/Header";
 
 export default function About() {
 	return (
