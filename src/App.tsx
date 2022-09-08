@@ -8,19 +8,19 @@ import Theme from "./components/Theme";
 import Work from "./components/Work";
 
 export default function App() {
-	return (
-		<>
-			<Theme>
-				<NavBar />
-				<Home />
-				<PageBreak />
-				<About />
-				<PageBreak />
-				<Work />
-				<PageBreak />
-				<Contact />
-				<Footer />
-			</Theme>
-		</>
-	);
+    return (
+        <>
+            <Theme>
+                <NavBar />
+                <Home />
+                <PageBreak />
+                <About />
+                <PageBreak />
+                <Work />
+                <PageBreak />
+                <Contact />
+                <Footer />
+            </Theme>
+        </>
+    );
 }
