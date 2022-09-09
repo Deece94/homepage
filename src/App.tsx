@@ -9,21 +9,21 @@ import Theme from "./components/Theme";
 import Work from "./components/Work";
 
 export default function App() {
-	return (
-		<>
-			<Theme>
-				<NavBar />
-				<Main>
-					<Home />
-					<PageBreak />
-					<About />
-					<PageBreak />
-					<Work />
-					<PageBreak />
-					<Contact />
-					<Footer />
-				</Main>
-			</Theme>
-		</>
-	);
+    return (
+        <>
+            <Theme>
+                <NavBar />
+                <Main>
+                    <Home />
+                    <PageBreak />
+                    <About />
+                    <PageBreak />
+                    <Work />
+                    <PageBreak />
+                    <Contact />
+                    <Footer />
+                </Main>
+            </Theme>
+        </>
+    );
 }
