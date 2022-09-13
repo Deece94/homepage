@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Link = styled.a`
+export default styled.a`
 	color: ${(props) => props.theme.colors.primary};
 	text-decoration: none;
 	font-weight: bold;
@@ -8,5 +8,3 @@ const Link = styled.a`
 		text-decoration: underline;
 	}
 `;
-
-export default Link;
