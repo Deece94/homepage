@@ -18,7 +18,34 @@ const Half = styled.div`
     padding: 0px 10px;
 `;
 
-const ImgContainer = styled.div`
+const TextHalf = styled(Half)`
+    position: relative;
+    &:before {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-color: ${(props) => props.theme.colors.secondary};
+        border-style: solid;
+        content: " ";
+        top: 0;
+        left: -10px;
+        border-width: 1px 0 0 1px;
+    }
+
+    & > :first-child:after {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-color: ${(props) => props.theme.colors.secondary};
+        border-style: solid;
+        content: " ";
+        bottom: 0;
+        right: -10px;
+        border-width: 0 1px 1px 0;
+    }
+`;
+
+const ImgHalf = styled(Half)`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,8 +54,8 @@ const ImgContainer = styled.div`
 const ImgBorder = styled.div`
     border: 4px solid ${(props) => props.theme.colors.secondary};
     border-radius: 100%;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 350px;
+    max-width: 350px;
 `;
 
 const ProfileImg = styled.img`
@@ -48,7 +75,7 @@ export default function About() {
         <PageBlock id="about">
             <Header>About Me</Header>
             <Container>
-                <Half>
+                <TextHalf>
                     <Paragraph>
                         Hello! My name is Dylan. I'm a full-stack web developer
                         from Newcastle, Australia. My passion for programming
@@ -79,14 +106,12 @@ export default function About() {
                         applications. If you want to hear more, feel free to get
                         in contact!
                     </Paragraph>
-                </Half>
-                <Half>
-                    <ImgContainer>
-                        <ImgBorder>
-                            <ProfileImg src="profile.jpg"></ProfileImg>
-                        </ImgBorder>
-                    </ImgContainer>
-                </Half>
+                </TextHalf>
+                <ImgHalf>
+                    <ImgBorder>
+                        <ProfileImg src="profile.jpg"></ProfileImg>
+                    </ImgBorder>
+                </ImgHalf>
             </Container>
         </PageBlock>
     );
