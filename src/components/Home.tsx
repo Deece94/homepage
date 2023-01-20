@@ -15,6 +15,7 @@ const TitleContainer = styled.div`
 const Introduction = styled.p`
     margin: 0;
     font-size: clamp(15px, 4vw, 20px);
+    color: ${(props) => props.theme.colors.primary_300};
 `;
 
 const Greeting = styled(Introduction)`
@@ -22,10 +23,10 @@ const Greeting = styled(Introduction)`
 `;
 
 const NameTitle = styled.h1`
-    font-size: clamp(40px, 8vw, 60px);
+    font-size: clamp(40px, 8vw, 70px);
     font-weight: normal;
     margin: 0;
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.primary_100};
 `;
 
 export default function Home() {
