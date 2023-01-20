@@ -1,93 +1,88 @@
 import styled from "styled-components";
 
-const FixedContainer = styled.header`
-	width: 100%;
-	z-index: 50;
-	top: 0;
-	position: fixed;
-	background-color: ${(props) => props.theme.colors.dark_accent};
-	border-bottom: 1px solid ${(props) => props.theme.colors.white};
-	transition: top 0.6s;
-	height: 70px;
-`;
-
-const FlexContainer = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0px 50px 0px 50px;
+const HeaderBar = styled.header`
+    width: 100%;
+    z-index: 50;
+    top: 0;
+    position: fixed;
+    background-color: ${(props) => props.theme.colors.dark_accent};
+    border-bottom: 1px solid ${(props) => props.theme.colors.white};
+    transition: top 0.6s;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 60% repeat(4, 1fr);
 `;
 
 const TitleContainer = styled.div`
-	display: flex;
-	align-items: center;
-	width: 70%;
-	padding: 10px 0 10px 0;
-`;
-
-const NavContainer = styled.nav`
-	display: flex;
+    display: flex;
+    align-items: center;
+    width: 100%;
 `;
 
 const NavBlock = styled.div`
-	padding: 10px;
-	display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const NavLink = styled.button`
-	color: ${(props) => props.theme.colors.white};
-	font-weight: bold;
-	font-size: 100%;
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 10px 0px;
-	font-weight: 100;
-	&:hover {
-		text-decoration: underline;
-	}
+    color: ${(props) => props.theme.colors.primary_100};
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 120%;
+    &:hover {
+        text-decoration: underline;
+    }
+`;
+
+const NavNumber = styled.span`
+    color: ${(props) => props.theme.colors.secondary};
+    font-weight: 500;
+    font-size: 120%;
 `;
 
 function ScrollLink(props: { scrollToId: string; children: any }) {
-	const scrollToId: string = props.scrollToId;
+    const scrollToId: string = props.scrollToId;
 
-	const executeScroll = (id: string) => {
-		const ele = document.getElementById(id);
-		window.scrollTo({
-			top: ele.offsetTop,
-			behavior: "smooth",
-		});
-	};
+    const executeScroll = (id: string) => {
+        const ele = document.getElementById(id);
+        window.scrollTo({
+            top: ele.offsetTop,
+            behavior: "smooth",
+        });
+    };
 
-	return (
-		<NavLink onClick={() => executeScroll(scrollToId)}>
-			{props.children}
-		</NavLink>
-	);
+    return (
+        <NavLink onClick={() => executeScroll(scrollToId)}>
+            {props.children}
+        </NavLink>
+    );
 }
 
 export default function NavBar() {
-	return (
-		<FixedContainer>
-			<FlexContainer>
-				<TitleContainer>
-					{/* <img src="logo.svg" alt="logo" height="40px" /> */}
-				</TitleContainer>
-				<NavContainer>
-					<NavBlock>
-						<ScrollLink scrollToId="home">Home</ScrollLink>
-					</NavBlock>
-					<NavBlock>
-						<ScrollLink scrollToId="about">About Me</ScrollLink>
-					</NavBlock>
-					<NavBlock>
-						<ScrollLink scrollToId="work">Projects</ScrollLink>
-					</NavBlock>
-					<NavBlock>
-						<ScrollLink scrollToId="contact">Contact</ScrollLink>
-					</NavBlock>
-				</NavContainer>
-			</FlexContainer>
-		</FixedContainer>
-	);
+    return (
+        <HeaderBar>
+            <TitleContainer>
+                <h2>Dylan Collar</h2>
+            </TitleContainer>
+            <NavBlock>
+                <NavNumber>01.</NavNumber>
+                <ScrollLink scrollToId="home">Home</ScrollLink>
+            </NavBlock>
+            <NavBlock>
+                <NavNumber>02.</NavNumber>
+                <ScrollLink scrollToId="about">About Me</ScrollLink>
+            </NavBlock>
+            <NavBlock>
+                <NavNumber>03.</NavNumber>
+                <ScrollLink scrollToId="work">Projects</ScrollLink>
+            </NavBlock>
+            <NavBlock>
+                <NavNumber>04.</NavNumber>
+                <ScrollLink scrollToId="contact">Contact</ScrollLink>
+            </NavBlock>
+        </HeaderBar>
+    );
 }

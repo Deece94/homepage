@@ -4,7 +4,7 @@ import Header from "./styles/Header";
 import Link from "./styles/Link";
 
 const Paragraph = styled.p`
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.primary_200};
     font-size: 18px;
 `;
 
@@ -21,10 +21,11 @@ const Half = styled.div`
 const ImgContainer = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
 `;
 
 const ImgBorder = styled.div`
-    border: 4px solid ${(props) => props.theme.colors.primary};
+    border: 4px solid ${(props) => props.theme.colors.secondary};
     border-radius: 100%;
     max-height: 300px;
     max-width: 300px;

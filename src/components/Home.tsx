@@ -18,7 +18,7 @@ const Introduction = styled.p`
 `;
 
 const Greeting = styled(Introduction)`
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary_500};
 `;
 
 const NameTitle = styled.h1`
