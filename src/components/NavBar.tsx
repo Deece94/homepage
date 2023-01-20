@@ -16,7 +16,14 @@ const HeaderBar = styled.header`
 const TitleContainer = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
+`;
+
+const Heading = styled.h2`
+    padding: 0;
+    margin: 0;
+    font-size: 200%;
 `;
 
 const NavBlock = styled.div`
@@ -65,7 +72,7 @@ export default function NavBar() {
     return (
         <HeaderBar>
             <TitleContainer>
-                <h2>Dylan Collar</h2>
+                <Heading></Heading>
             </TitleContainer>
             <NavBlock>
                 <NavNumber>01.</NavNumber>
